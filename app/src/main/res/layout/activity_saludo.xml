@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_saludo"
         android:layout_marginTop="10dp"
+        android:divider="@color/colorDivide"
         android:id="@+id/list"
         />
 
