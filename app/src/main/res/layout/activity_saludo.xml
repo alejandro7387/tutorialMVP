@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/label"
+        android:id="@+id/label_saludo"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saluda"
+        android:textSize="20sp"
+        android:layout_below="@+id/label_saludo"
+        android:layout_centerHorizontal="true"
+        android:padding="6dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/btn_saludo"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_saludo"
+        android:layout_marginTop="10dp"
+        android:id="@+id/list"
+        />
+
+</RelativeLayout>
