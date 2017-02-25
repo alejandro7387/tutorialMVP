@@ -10,16 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textSize="18dp"
         android:text="@string/label"
         android:id="@+id/label_saludo"
         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_saludo"
+        android:id="@+id/name_text"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/saluda"
         android:textSize="20sp"
-        android:layout_below="@+id/label_saludo"
+        android:layout_below="@+id/name_text"
         android:layout_centerHorizontal="true"
         android:padding="6dp"
         android:background="@color/colorAccent"

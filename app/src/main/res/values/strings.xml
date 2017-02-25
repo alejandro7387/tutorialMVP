@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Tutorial</string>
     <string name="saluda">Saluda</string>
-    <string name="label">...</string>
+    <string name="label">Dame tu nombre!</string>
 </resources>

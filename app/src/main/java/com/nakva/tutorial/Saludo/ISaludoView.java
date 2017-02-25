@@ -17,4 +17,8 @@ public interface ISaludoView {
     void showErrorLimitPass();
 
     void updateSaludos(List<Saludo> mList);
+
+    String getName();
+
+    void clearImput();
 }

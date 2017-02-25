@@ -25,10 +25,12 @@ public class SaludoPresenter  implements ISaludoPresenter, ISaludoModelCallback 
     @Override
     public void onClickSaludo() {
         if(this.count < 5) {
+            String name = this.mView.getName();
             this.count++; //count = count + 1
-            String mensaje = "Hola como estas";
+            String mensaje = "Hola como estas " + name ;
             this.mModel.addSaludo(mensaje, this.count, this);
             this.mView.updateSaludo(mensaje);
+            this.mView.clearImput();
         }
         else{
             this.mView.showErrorLimitPass();

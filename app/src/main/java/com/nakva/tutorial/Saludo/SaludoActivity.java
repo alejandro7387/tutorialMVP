@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +26,7 @@ public class SaludoActivity extends AppCompatActivity implements ISaludoView, Vi
     private TextView labelSaluda;
     private ISaludoPresenter mPresenter;
     private ListView mListView;
+    private EditText nameText;
 
     private SaludoAdapter mAdapter;
 
@@ -44,6 +46,7 @@ public class SaludoActivity extends AppCompatActivity implements ISaludoView, Vi
     private void linkViews() {
         this.labelSaluda = (TextView)this.findViewById(R.id.label_saludo);
         this.mListView = (ListView)this.findViewById(R.id.list);
+        this.nameText = (EditText)this.findViewById(R.id.name_text);
         this.mListView.setAdapter(this.mAdapter);
         ((Button)this.findViewById(R.id.btn_saludo)).setOnClickListener(this);
     }
@@ -56,6 +59,16 @@ public class SaludoActivity extends AppCompatActivity implements ISaludoView, Vi
                 this.mPresenter.onClickSaludo();
                 break;
         }
+    }
+
+    @Override
+    public void clearImput() {
+        this.nameText.setText("");
+    }
+
+    @Override
+    public String getName() {
+        return nameText.getText().toString().trim();
     }
 
     @Override
